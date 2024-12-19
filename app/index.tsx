@@ -9,7 +9,7 @@ export default function Index() {
         alignItems: 'center',
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text className="p-4 color-green-500">안녕 리액트 네이티브 세상???</Text>
     </View>
   );
 }
