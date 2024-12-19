@@ -2,16 +2,28 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
+
+    // 타입 체크 강화
+    "noUncheckedIndexedAccess": true, // 배열 인덱스 접근시 undefined 체크 강제
+    "noImplicitOverride": true, // override 키워드 사용 강제
+    "allowUnreachableCode": false, // 도달할 수 없는 코드 금지
+    "exactOptionalPropertyTypes": true, // 옵셔널 프로퍼티 타입 엄격 체크
+    "noFallthroughCasesInSwitch": true, // switch문에서 break 강제
+
+    // 모듈 해석
+    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
+      "@/*": ["./*"]
+    },
+
+    // JavaScript 기능
+    "useDefineForClassFields": true, // class fields 정의 방식
+    "forceConsistentCasingInFileNames": true, // 파일명 대소문자 일관성 체크
+
+    // 추가 기능
+    "skipLibCheck": true, // 라이브러리 타입 체크 스킵 (빌드 성능 향상)
+    "isolatedModules": true // 독립 모듈 검사 활성화
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-  ]
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"],
+  "exclude": ["node_modules"]
 }
