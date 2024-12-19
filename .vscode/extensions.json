@@ -3,6 +3,7 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "naumovs.color-highlight",
-    "wayou.vscode-todo-highlight"
+    "wayou.vscode-todo-highlight",
+    "seatonjiang.gitmoji-vscode"
   ]
 }

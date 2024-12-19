@@ -1,8 +1,55 @@
-# Set up your environment (Required!)
+# 프로젝트 셋업 (With Expo Go)
 
-[Set up your environment](https://docs.expo.dev/get-started/set-up-your-environment/)를 참고하여 Android Emulator, iOS Simulator(MacOS) 환경 설정
+Expo Go 사용:
 
-Android Emulator or iOS Simulator(MacOS) -> Development build -> EAS off 이후 순서대로 설정
+- 빠른 개발 시작
+- 기본 기능 구현
+- UI/UX 개발
+- Expo API(기본 제공) 기능만으로 충분한 경우
+
+## 사전 설정
+
+[Set up your environment](https://docs.expo.dev/get-started/set-up-your-environment/)
+Android Emulator or iOS Simulator(MacOS) -> Expo Go 선택 이후 순서대로 설정
+
+## 프로젝트 시작
+
+1. Install dependencies
+
+   ```bash
+   npm ci
+   ```
+
+2. Start a development server
+
+   ```bash
+   npm start
+   ```
+
+3. Open the app on your device
+   press `a` in the terminal -> Open Android emulator
+   press `i` in the terminal -> Open iOS simulator
+
+4. Open the developer menu
+   press `m` in the terminal -> Open the developer menu
+   https://docs.expo.dev/debugging/tools/
+
+# 프로젝트 셋업 (With Development build)
+
+Development Build 사용:
+
+- 커스텀 네이티브 모듈이 필요한 경우
+- 특정 third-party 라이브러리 사용이 필요한 경우
+- 완전한 네이티브 기능이 필요한 경우
+- 성능 최적화 필요한 경우
+- 네이티브 코드 수정이 필요한 경우
+
+위 경우에 점진적으로 expo go에서 development build로 전환이 가능
+
+## 사전 설정
+
+[Set up your environment](https://docs.expo.dev/get-started/set-up-your-environment/)
+Android Emulator or iOS Simulator(MacOS) -> Development build -> EAS off 선택 이후 순서대로 설정
 
 # Get started
 
@@ -12,26 +59,42 @@ Android Emulator or iOS Simulator(MacOS) -> Development build -> EAS off 이후 
    npm ci
    ```
 
-2. Build the app
+2. Running your app on Simulator/Emulator
 
    ```bash
-   npn run build:pre
+   npm run ios
    ```
-
-3. Start the app
 
    ```bash
-   npm start
+   npm run android
    ```
 
-4. Start the Simulator/Emulator
-   press `a` in the terminal -> Open Android emulator
-   press `i` in the terminal -> Open iOS simulator
+# Technologies Used
 
-5. Open the developer menu
-   press `m` in the terminal -> Open the developer menu
-   https://docs.expo.dev/debugging/tools/
+## Core
 
-# Used tech stack
+- [React Native](https://reactnative.dev/) - Mobile application framework
+- [Expo](https://expo.dev/) - React Native development platform
+- [Expo Router](https://docs.expo.dev/router/introduction/) - File-based routing
+- [TypeScript](https://www.typescriptlang.org/) - Programming language
 
-...
+## UI & Styling
+
+- [NativeWind](https://www.nativewind.dev/) - TailwindCSS for React Native
+
+## Development Tools
+
+- [ESLint](https://eslint.org/) - Code linting
+- [Prettier](https://prettier.io/) - Code formatting
+- ~~[Jest](https://jestjs.io/) - Testing framework~~
+
+## Project Management
+
+- [Git](https://git-scm.com/) - Version control
+- [gitmoji](https://gitmoji.dev/) - Commit message convention
+- ~~[GitHub Actions](https://github.com/features/actions) - CI/CD~~
+
+## Recommended IDE
+
+- [![VSCode](https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://code.visualstudio.com/) Visual Studio Code
+- [![Cursor](https://img.shields.io/badge/Cursor-000000?style=for-the-badge&logo=cursor&logoColor=white)](https://cursor.sh/) Cursor
