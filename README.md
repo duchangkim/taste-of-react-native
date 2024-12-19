@@ -34,7 +34,7 @@ Android Emulator or iOS Simulator(MacOS) -> Expo Go 선택 이후 순서대로 �
    press `m` in the terminal -> Open the developer menu
    https://docs.expo.dev/debugging/tools/
 
-# 프로젝트 셋업 (With Development build)
+# 프로젝트 셋업 (With Development build) (Recommended)
 
 Development Build 사용:
 
@@ -44,7 +44,7 @@ Development Build 사용:
 - 성능 최적화 필요한 경우
 - 네이티브 코드 수정이 필요한 경우
 
-위 경우에 점진적으로 expo go에서 development build로 전환이 가능
+NFC 모듈을 사용해야 하기 때문에 Development Build 사용
 
 ## 사전 설정
 
@@ -59,7 +59,13 @@ Android Emulator or iOS Simulator(MacOS) -> Development build -> EAS off 선택 
    npm ci
    ```
 
-2. Running your app on Simulator/Emulator
+2. Build your app
+
+   ```bash
+   npm run build:pre
+   ```
+
+3. Running your app on Simulator/Emulator
 
    ```bash
    npm run ios
