@@ -1,7 +1,7 @@
 import { loadAsync } from 'expo-font';
 import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
-import '@/components/styles/global.css';
+import '@/src/shared/styles/global.css';
 
 SplashScreen.preventAutoHideAsync();
 
