@@ -49,10 +49,14 @@ module.exports = {
         },
         error: 'rgb(var(--color-red-500) / <alpha-value>)',
         info: 'rgb(var(--color-green-500) / <alpha-value>)',
-        white: 'rgb(var(--color-white)) / <alpha-value>)',
-        black: 'rgb(var(--color-black)) / <alpha-value>)',
+        white: 'rgb(var(--color-white) / <alpha-value>)',
+        black: 'rgb(var(--color-black) / <alpha-value>)',
       },
 
+      fontWeight: {
+        // font-bold 적용 시 아래 fontFamily와 중복 방지를 위함
+        bold: undefined,
+      },
       fontFamily: {
         regular: ['Pretendard-Regular'],
         bold: ['Pretendard-Bold'],
@@ -62,72 +66,31 @@ module.exports = {
       },
 
       fontSize: {
-        display: {
-          sm: [36, { lineHeight: 44, letterSpacing: -0.015 }],
-          m: [42, { lineHeight: 52, letterSpacing: -0.015 }],
-          l: [56, { lineHeight: 64, letterSpacing: -0.015 }],
-        },
-        headline: {
-          sm: [24, { lineHeight: 32, letterSpacing: -0.01 }],
-          m: [28, { lineHeight: 36, letterSpacing: -0.01 }],
-          l: [32, { lineHeight: 40, letterSpacing: -0.01 }],
-        },
-        title: {
-          sm: [14, { lineHeight: 22, letterSpacing: -0.01 }],
-          m: [16, { lineHeight: 24, letterSpacing: -0.01 }],
-          l: [22, { lineHeight: 28, letterSpacing: -0.01 }],
-        },
-        label: {
-          sm: [12, { lineHeight: 18, letterSpacing: -0.01 }],
-          m: [14, { lineHeight: 22, letterSpacing: -0.01 }],
-          l: [16, { lineHeight: 25, letterSpacing: -0.01 }],
-        },
-        body: {
-          sm: [15, { lineHeight: 24, letterSpacing: -0.01 }],
-          m: [17, { lineHeight: 26, letterSpacing: -0.01 }],
-          l: [19, { lineHeight: 28, letterSpacing: -0.01 }],
-        },
-      },
+        'display-sm': [36, { lineHeight: 1.22, letterSpacing: -0.015 }],
+        'display-md': [42, { lineHeight: 1.24, letterSpacing: -0.015 }],
+        'display-lg': [56, { lineHeight: 1.15, letterSpacing: -0.015 }],
 
-      boxShadow: {
-        elevation: {
-          1: {
-            shadowColor: '#000',
-            shadowOffset: {
-              width: 0,
-              height: 2,
-            },
-            shadowOpacity: 0.15,
-            shadowRadius: 3.84,
-            elevation: 5, // Android
-          },
-          2: {
-            shadowColor: '#000',
-            shadowOffset: {
-              width: 0,
-              height: 4,
-            },
-            shadowOpacity: 0.25,
-            shadowRadius: 5.46,
-            elevation: 9, // Android
-          },
-          3: {
-            shadowColor: '#000',
-            shadowOffset: {
-              width: 0,
-              height: 6,
-            },
-            shadowOpacity: 0.3,
-            shadowRadius: 6.68,
-            elevation: 13, // Android
-          },
-        },
+        'headline-sm': [24, { lineHeight: 1.33, letterSpacing: -0.01 }],
+        'headline-md': [28, { lineHeight: 1.29, letterSpacing: -0.01 }],
+        'headline-lg': [32, { lineHeight: 1.25, letterSpacing: -0.01 }],
+
+        'title-sm': [14, { lineHeight: 1.57, letterSpacing: -0.01 }],
+        'title-md': [16, { lineHeight: 1.5, letterSpacing: -0.01 }],
+        'title-lg': [22, { lineHeight: 1.27, letterSpacing: -0.01 }],
+
+        'label-sm': [12, { lineHeight: 1.5, letterSpacing: -0.01 }],
+        'label-md': [14, { lineHeight: 1.57, letterSpacing: -0.01 }],
+        'label-lg': [16, { lineHeight: 1.56, letterSpacing: -0.01 }],
+
+        'body-sm': [15, { lineHeight: 1.6, letterSpacing: -0.01 }],
+        'body-md': [17, { lineHeight: 1.53, letterSpacing: -0.01 }],
+        'body-lg': [19, { lineHeight: 1.47, letterSpacing: -0.01 }],
       },
 
       borderRadius: {
         xs: 4,
         sm: 8,
-        m: 12,
+        md: 12,
         lg: 16,
         xl: 28,
         full: 9999,
@@ -161,8 +124,8 @@ module.exports = {
           '--color-grey-900': '22 22 22',
 
           '--color-yellow-500': '252 191 73',
-          '--color-red-500': '255 59 59',
-          '--color-green-500': '30 212 78',
+          '--color-red-500': '227 43 43',
+          '--color-green-500': '15 213 153',
 
           '--color-white': '255 255 255',
           '--color-black': 'var(--color-grey-900)',
