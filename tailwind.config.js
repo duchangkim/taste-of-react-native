@@ -5,54 +5,55 @@ module.exports = {
   content: ['./app/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
   presets: [require('nativewind/preset')],
   theme: {
-    extend: {
-      colors: {
-        // 기본 컬러 토큰
-        sky: {
-          50: 'rgb(var(--color-sky-50) / <alpha-value>)',
-          100: 'rgb(var(--color-sky-100) / <alpha-value>)',
-          200: 'rgb(var(--color-sky-200) / <alpha-value>)',
-          300: 'rgb(var(--color-sky-300) / <alpha-value>)',
-          400: 'rgb(var(--color-sky-400) / <alpha-value>)',
-          500: 'rgb(var(--color-sky-500) / <alpha-value>)',
-          600: 'rgb(var(--color-sky-600) / <alpha-value>)',
-          700: 'rgb(var(--color-sky-700) / <alpha-value>)',
-          800: 'rgb(var(--color-sky-800) / <alpha-value>)',
-          900: 'rgb(var(--color-sky-900) / <alpha-value>)',
-        },
-        grey: {
-          50: 'rgb(var(--color-grey-50) / <alpha-value>)',
-          100: 'rgb(var(--color-grey-100) / <alpha-value>)',
-          200: 'rgb(var(--color-grey-200) / <alpha-value>)',
-          300: 'rgb(var(--color-grey-300) / <alpha-value>)',
-          400: 'rgb(var(--color-grey-400) / <alpha-value>)',
-          500: 'rgb(var(--color-grey-500) / <alpha-value>)',
-          600: 'rgb(var(--color-grey-600) / <alpha-value>)',
-          700: 'rgb(var(--color-grey-700) / <alpha-value>)',
-          800: 'rgb(var(--color-grey-800) / <alpha-value>)',
-          900: 'rgb(var(--color-grey-900) / <alpha-value>)',
-        },
-        yellow: {
-          500: 'rgb(var(--color-yellow-500) / <alpha-value>)',
-        },
-        red: {
-          500: 'rgb(var(--color-red-500) / <alpha-value>)',
-        },
-        green: {
-          500: 'rgb(var(--color-green-500) / <alpha-value>)',
-        },
-
-        // 시맨틱 컬러 토큰
-        brand: {
-          primary: 'rgb(var(--color-sky-500) / <alpha-value>)',
-          secondary: 'rgb(var(--color-yellow-500) / <alpha-value>)',
-        },
-        error: 'rgb(var(--color-red-500) / <alpha-value>)',
-        info: 'rgb(var(--color-green-500) / <alpha-value>)',
-        white: 'rgb(var(--color-white) / <alpha-value>)',
-        black: 'rgb(var(--color-black) / <alpha-value>)',
+    colors: {
+      // 기본 컬러 토큰
+      transparent: 'transparent',
+      current: 'currentColor',
+      sky: {
+        50: 'rgb(var(--color-sky-50) / <alpha-value>)',
+        100: 'rgb(var(--color-sky-100) / <alpha-value>)',
+        200: 'rgb(var(--color-sky-200) / <alpha-value>)',
+        300: 'rgb(var(--color-sky-300) / <alpha-value>)',
+        400: 'rgb(var(--color-sky-400) / <alpha-value>)',
+        500: 'rgb(var(--color-sky-500) / <alpha-value>)',
+        600: 'rgb(var(--color-sky-600) / <alpha-value>)',
+        700: 'rgb(var(--color-sky-700) / <alpha-value>)',
+        800: 'rgb(var(--color-sky-800) / <alpha-value>)',
+        900: 'rgb(var(--color-sky-900) / <alpha-value>)',
+      },
+      grey: {
+        50: 'rgb(var(--color-grey-50) / <alpha-value>)',
+        100: 'rgb(var(--color-grey-100) / <alpha-value>)',
+        200: 'rgb(var(--color-grey-200) / <alpha-value>)',
+        300: 'rgb(var(--color-grey-300) / <alpha-value>)',
+        400: 'rgb(var(--color-grey-400) / <alpha-value>)',
+        500: 'rgb(var(--color-grey-500) / <alpha-value>)',
+        600: 'rgb(var(--color-grey-600) / <alpha-value>)',
+        700: 'rgb(var(--color-grey-700) / <alpha-value>)',
+        800: 'rgb(var(--color-grey-800) / <alpha-value>)',
+        900: 'rgb(var(--color-grey-900) / <alpha-value>)',
+      },
+      yellow: {
+        500: 'rgb(var(--color-yellow-500) / <alpha-value>)',
+      },
+      red: {
+        500: 'rgb(var(--color-red-500) / <alpha-value>)',
+      },
+      green: {
+        500: 'rgb(var(--color-green-500) / <alpha-value>)',
       },
 
+      // 시맨틱 컬러 토큰
+      brand: {
+        primary: 'rgb(var(--color-sky-500) / <alpha-value>)',
+        secondary: 'rgb(var(--color-yellow-500) / <alpha-value>)',
+      },
+      error: 'rgb(var(--color-red-500) / <alpha-value>)',
+      info: 'rgb(var(--color-green-500) / <alpha-value>)',
+      white: 'rgb(var(--color-white) / <alpha-value>)',
+      black: 'rgb(var(--color-black) / <alpha-value>)',
+    },
+    extend: {
       fontWeight: {
         // font-bold 적용 시 아래 fontFamily와 중복 방지를 위함
         bold: undefined,
