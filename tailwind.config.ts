@@ -5,7 +5,7 @@ import { colorTokens } from './src/shared/ui/color-tokens';
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  content: ['./app/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
+  content: ['./app/**/*.{js,jsx,ts,tsx}', './src/**/*.{js,jsx,ts,tsx}'],
   presets: [require('nativewind/preset')],
   theme: {
     colors: {
@@ -56,49 +56,42 @@ const config: Config = {
       white: 'rgb(var(--color-white) / <alpha-value>)',
       black: 'rgb(var(--color-black) / <alpha-value>)',
     },
-    extend: {
-      fontWeight: {
-        // font-bold 적용 시 아래 fontFamily와 중복 방지를 위함
-        // bold: undefined,
-      },
-      fontFamily: {
-        regular: ['Pretendard-Regular'],
-        bold: ['Pretendard-Bold'],
+    fontFamily: {
+      regular: ['Pretendard-Regular'],
+      bold: ['Pretendard-Bold'],
 
-        // 기본 폰트
-        sans: ['Pretendard-Regular'],
-      },
+      // 기본 폰트
+      sans: ['Pretendard-Regular'],
+    },
+    fontWeight: {},
+    fontSize: {
+      'display-sm': ['36', { lineHeight: '1.22', letterSpacing: '-0.015' }],
+      'display-md': ['42', { lineHeight: '1.24', letterSpacing: '-0.015' }],
+      'display-lg': ['56', { lineHeight: '1.15', letterSpacing: '-0.015' }],
 
-      fontSize: {
-        'display-sm': ['36', { lineHeight: '1.22', letterSpacing: '-0.015' }],
-        'display-md': ['42', { lineHeight: '1.24', letterSpacing: '-0.015' }],
-        'display-lg': ['56', { lineHeight: '1.15', letterSpacing: '-0.015' }],
+      'headline-sm': ['24', { lineHeight: '1.33', letterSpacing: '-0.01' }],
+      'headline-md': ['28', { lineHeight: '1.29', letterSpacing: '-0.01' }],
+      'headline-lg': ['32', { lineHeight: '1.25', letterSpacing: '-0.01' }],
 
-        'headline-sm': ['24', { lineHeight: '1.33', letterSpacing: '-0.01' }],
-        'headline-md': ['28', { lineHeight: '1.29', letterSpacing: '-0.01' }],
-        'headline-lg': ['32', { lineHeight: '1.25', letterSpacing: '-0.01' }],
+      'title-sm': ['14', { lineHeight: '1.57', letterSpacing: '-0.01' }],
+      'title-md': ['16', { lineHeight: '1.5', letterSpacing: '-0.01' }],
+      'title-lg': ['22', { lineHeight: '1.27', letterSpacing: '-0.01' }],
 
-        'title-sm': ['14', { lineHeight: '1.57', letterSpacing: '-0.01' }],
-        'title-md': ['16', { lineHeight: '1.5', letterSpacing: '-0.01' }],
-        'title-lg': ['22', { lineHeight: '1.27', letterSpacing: '-0.01' }],
+      'label-sm': ['12', { lineHeight: '1.5', letterSpacing: '-0.01' }],
+      'label-md': ['14', { lineHeight: '1.57', letterSpacing: '-0.01' }],
+      'label-lg': ['16', { lineHeight: '1.56', letterSpacing: '-0.01' }],
 
-        'label-sm': ['12', { lineHeight: '1.5', letterSpacing: '-0.01' }],
-        'label-md': ['14', { lineHeight: '1.57', letterSpacing: '-0.01' }],
-        'label-lg': ['16', { lineHeight: '1.56', letterSpacing: '-0.01' }],
-
-        'body-sm': ['15', { lineHeight: '1.6', letterSpacing: '-0.01' }],
-        'body-md': ['17', { lineHeight: '1.53', letterSpacing: '-0.01' }],
-        'body-lg': ['19', { lineHeight: '1.47', letterSpacing: '-0.01' }],
-      },
-
-      borderRadius: {
-        xs: '4',
-        sm: '8',
-        md: '12',
-        lg: '16',
-        xl: '28',
-        full: '9999',
-      },
+      'body-sm': ['15', { lineHeight: '1.6', letterSpacing: '-0.01' }],
+      'body-md': ['17', { lineHeight: '1.53', letterSpacing: '-0.01' }],
+      'body-lg': ['19', { lineHeight: '1.47', letterSpacing: '-0.01' }],
+    },
+    borderRadius: {
+      xs: '4',
+      sm: '8',
+      md: '12',
+      lg: '16',
+      xl: '28',
+      full: '9999',
     },
   },
   plugins: [

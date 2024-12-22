@@ -3,10 +3,6 @@ const { getDefaultConfig } = require('expo/metro-config');
 const { withNativeWind } = require('nativewind/metro');
 
 /** @type {import('expo/metro-config').MetroConfig} */
-// const config = getDefaultConfig(__dirname);
-
-// module.exports = withNativeWind(config, { input: './components/styles/global.css' });
-
 module.exports = (() => {
   const config = getDefaultConfig(__dirname);
 
@@ -21,6 +17,8 @@ module.exports = (() => {
     assetExts: resolver.assetExts.filter((ext) => ext !== 'svg'),
     sourceExts: [...resolver.sourceExts, 'svg'],
   };
+  config.resetCache = true;
+  config.resolver.sourceExts = [...config.resolver.sourceExts, 'css'];
 
   return withNativeWind(config, { input: './src/shared/styles/global.css' });
 })();
