@@ -58,6 +58,7 @@ const config: Config = {
     },
     fontFamily: {
       regular: ['Pretendard-Regular'],
+      medium: ['Pretendard-Medium'],
       bold: ['Pretendard-Bold'],
 
       // 기본 폰트

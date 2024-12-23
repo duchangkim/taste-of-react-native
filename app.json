@@ -38,7 +38,11 @@
       [
         "expo-font",
         {
-          "fonts": ["./assets/fonts/Pretendard-Regular.ttf", "./assets/fonts/Pretendard-Bold.ttf"]
+          "fonts": [
+            "./assets/fonts/Pretendard-Regular.ttf",
+            "./assets/fonts/Pretendard-Medium.ttf",
+            "./assets/fonts/Pretendard-Bold.ttf"
+          ]
         }
       ]
     ],
