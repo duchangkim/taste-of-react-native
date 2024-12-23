@@ -66,25 +66,25 @@ const config: Config = {
     },
     fontWeight: {},
     fontSize: {
-      'display-sm': ['36', { lineHeight: '1.22', letterSpacing: '-0.015' }],
-      'display-md': ['42', { lineHeight: '1.24', letterSpacing: '-0.015' }],
-      'display-lg': ['56', { lineHeight: '1.15', letterSpacing: '-0.015' }],
+      'display-sm': ['36', { lineHeight: '1.222222222', letterSpacing: '-0.015' }], // 44/36
+      'display-md': ['42', { lineHeight: '1.238095238', letterSpacing: '-0.015' }], // 52/42
+      'display-lg': ['56', { lineHeight: '1.142857143', letterSpacing: '-0.015' }], // 64/56
 
-      'headline-sm': ['24', { lineHeight: '1.33', letterSpacing: '-0.01' }],
-      'headline-md': ['28', { lineHeight: '1.29', letterSpacing: '-0.01' }],
-      'headline-lg': ['32', { lineHeight: '1.25', letterSpacing: '-0.01' }],
+      'headline-sm': ['24', { lineHeight: '1.333333333', letterSpacing: '-0.01' }], // 32/24
+      'headline-md': ['28', { lineHeight: '1.285714286', letterSpacing: '-0.01' }], // 36/28
+      'headline-lg': ['32', { lineHeight: '1.25', letterSpacing: '-0.01' }], // 40/32
 
-      'title-sm': ['14', { lineHeight: '1.57', letterSpacing: '-0.01' }],
-      'title-md': ['16', { lineHeight: '1.5', letterSpacing: '-0.01' }],
-      'title-lg': ['22', { lineHeight: '1.27', letterSpacing: '-0.01' }],
+      'title-sm': ['14', { lineHeight: '1.571428571', letterSpacing: '-0.01' }], // 22/14
+      'title-md': ['16', { lineHeight: '1.5', letterSpacing: '-0.01' }], // 24/16
+      'title-lg': ['22', { lineHeight: '1.272727273', letterSpacing: '-0.01' }], // 28/22
 
-      'label-sm': ['12', { lineHeight: '1.5', letterSpacing: '-0.01' }],
-      'label-md': ['14', { lineHeight: '1.57', letterSpacing: '-0.01' }],
-      'label-lg': ['16', { lineHeight: '1.56', letterSpacing: '-0.01' }],
+      'label-sm': ['12', { lineHeight: '1.5', letterSpacing: '-0.01' }], // 18/12
+      'label-md': ['14', { lineHeight: '1.571428571', letterSpacing: '-0.01' }], // 22/14
+      'label-lg': ['16', { lineHeight: '1.5625', letterSpacing: '-0.01' }], // 25/16
 
-      'body-sm': ['15', { lineHeight: '1.6', letterSpacing: '-0.01' }],
-      'body-md': ['17', { lineHeight: '1.53', letterSpacing: '-0.01' }],
-      'body-lg': ['19', { lineHeight: '1.47', letterSpacing: '-0.01' }],
+      'body-sm': ['15', { lineHeight: '1.6', letterSpacing: '-0.01' }], // 24/15
+      'body-md': ['17', { lineHeight: '1.529411765', letterSpacing: '-0.01' }], // 26/17
+      'body-lg': ['19', { lineHeight: '1.473684211', letterSpacing: '-0.01' }], // 28/19
     },
     borderRadius: {
       xs: '4',

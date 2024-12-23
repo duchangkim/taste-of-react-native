@@ -10,7 +10,7 @@ import { BADGE_ACCENT, BADGE_COLOR, BadgeIconProps, BadgeRootProps, BadgeTextPro
 
 const badge = tv({
   slots: {
-    base: 'flex-row items-center gap-[2] rounded-xs px-[8] py-[2]',
+    base: 'h-[26] flex-row items-center gap-[2] rounded-xs px-[8]',
     text: 'font-bold text-label-md',
   },
   variants: {
