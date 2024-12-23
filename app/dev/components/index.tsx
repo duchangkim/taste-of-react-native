@@ -2,15 +2,69 @@ import { useState } from 'react';
 import { ScrollView, Text, View } from 'react-native';
 
 import { Button } from '@/src/shared/ui/button';
+import { Checkbox } from '@/src/shared/ui/checkbox';
 import { Radio } from '@/src/shared/ui/radio';
 
 export default function ComponentsIndex() {
   const [value, setValue] = useState('apple');
+  const [checkValues, setCheckValues] = useState<string[]>(['kimchi']);
 
   return (
     <ScrollView>
       <View className="p-4">
         <Text className="text-headline-lg">Components Index page</Text>
+        <View className="mb-4 gap-2">
+          <Text className="text-headline-md">Checkboxes</Text>
+          <View className="flex-col gap-2">
+            <Checkbox.Group
+              className="flex-row gap-2"
+              value={checkValues}
+              onChange={setCheckValues}
+            >
+              <Checkbox.Item value="kimchi"></Checkbox.Item>
+              <Checkbox.Item size="lg" value="rice"></Checkbox.Item>
+
+              <Checkbox.Item color="white" value="kimchi"></Checkbox.Item>
+              <Checkbox.Item color="white" size="lg" value="rice"></Checkbox.Item>
+
+              <Checkbox.Item activeColor="secondary" color="white" value="kimchi"></Checkbox.Item>
+              <Checkbox.Item
+                activeColor="secondary"
+                color="white"
+                size="lg"
+                value="rice"
+              ></Checkbox.Item>
+
+              <Checkbox.Item activeColor="info" color="white" value="kimchi"></Checkbox.Item>
+              <Checkbox.Item
+                activeColor="info"
+                color="white"
+                size="lg"
+                value="rice"
+              ></Checkbox.Item>
+
+              <Checkbox.Item activeColor="warning" color="white" value="kimchi"></Checkbox.Item>
+              <Checkbox.Item
+                activeColor="warning"
+                color="white"
+                size="lg"
+                value="rice"
+              ></Checkbox.Item>
+            </Checkbox.Group>
+          </View>
+
+          <View className="mt-4">
+            <Checkbox.Group
+              className="flex-col gap-[20]"
+              value={checkValues}
+              onChange={setCheckValues}
+            >
+              <Checkbox.Wrap label="게시판에 게시한다." value="kimchi"></Checkbox.Wrap>
+              <Checkbox.Wrap label="게시판에 게시한다." value="rice"></Checkbox.Wrap>
+            </Checkbox.Group>
+          </View>
+        </View>
+
         <View className="mb-4 gap-2">
           <Text className="text-headline-md">Radios</Text>
           <View className="flex-col gap-2">
