@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ScrollView, Text, View } from 'react-native';
 
+import { Badge } from '@/src/shared/ui/badge';
 import { Button } from '@/src/shared/ui/button';
 import { Checkbox } from '@/src/shared/ui/checkbox';
 import { Divider } from '@/src/shared/ui/divider';
@@ -14,6 +15,64 @@ export default function ComponentsIndex() {
     <ScrollView>
       <View className="p-4">
         <Text className="text-headline-lg">Components Index page</Text>
+        <View className="mb-4 gap-2">
+          <Text className="text-headline-md">Badges</Text>
+          <View className="gap-[8]">
+            <View className="flex-row gap-[8]">
+              <Badge>
+                <Badge.Text>근무</Badge.Text>
+              </Badge>
+              <Badge color="secondary">
+                <Badge.Text>대근</Badge.Text>
+              </Badge>
+              <Badge color="info">
+                <Badge.Text>휴가</Badge.Text>
+              </Badge>
+              <Badge color="warning">
+                <Badge.Text>결근</Badge.Text>
+              </Badge>
+            </View>
+
+            <View className="flex-row gap-[8]">
+              <Badge>
+                <Badge.Text>근무</Badge.Text>
+                <Badge.Icon name="arrowDownMedium" />
+              </Badge>
+              <Badge color="secondary">
+                <Badge.Text>대근</Badge.Text>
+                <Badge.Icon name="arrowDownMedium" />
+              </Badge>
+              <Badge color="info">
+                <Badge.Text>휴가</Badge.Text>
+                <Badge.Icon name="arrowDownMedium" />
+              </Badge>
+              <Badge color="warning">
+                <Badge.Text>결근</Badge.Text>
+                <Badge.Icon name="arrowDownMedium" />
+              </Badge>
+            </View>
+
+            <View className="flex-row gap-[8]">
+              <Badge accentTarget="text">
+                <Badge.Text>근무</Badge.Text>
+                <Badge.Icon name="arrowDownMedium" />
+              </Badge>
+              <Badge accentTarget="text" color="secondary">
+                <Badge.Text>대근</Badge.Text>
+                <Badge.Icon name="arrowDownMedium" />
+              </Badge>
+              <Badge accentTarget="text" color="info">
+                <Badge.Text>휴가</Badge.Text>
+                <Badge.Icon name="arrowDownMedium" />
+              </Badge>
+              <Badge accentTarget="text" color="warning">
+                <Badge.Text>결근</Badge.Text>
+                <Badge.Icon name="arrowDownMedium" />
+              </Badge>
+            </View>
+          </View>
+        </View>
+
         <View className="mb-4 gap-2 rounded-sm bg-white p-4">
           <Text className="text-headline-md">Dividers</Text>
 
