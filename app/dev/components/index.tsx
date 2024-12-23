@@ -3,6 +3,7 @@ import { ScrollView, Text, View } from 'react-native';
 
 import { Button } from '@/src/shared/ui/button';
 import { Checkbox } from '@/src/shared/ui/checkbox';
+import { Divider } from '@/src/shared/ui/divider';
 import { Radio } from '@/src/shared/ui/radio';
 
 export default function ComponentsIndex() {
@@ -13,6 +14,24 @@ export default function ComponentsIndex() {
     <ScrollView>
       <View className="p-4">
         <Text className="text-headline-lg">Components Index page</Text>
+        <View className="mb-4 gap-2 rounded-sm bg-white p-4">
+          <Text className="text-headline-md">Dividers</Text>
+
+          <View>
+            <Text className="text-body-sm">게시판에 게시한다</Text>
+            <Divider className="my-[8]" />
+            <Text className="text-body-sm">게시판에 게시한다2</Text>
+            <Divider className="my-[8]" />
+            <View className="flex-row items-center gap-[4]">
+              <Text className="text-body-sm">Blog</Text>
+              <Divider className="mx-[4]" direction="vertical" />
+              <Text className="text-body-sm">Docs</Text>
+              <Divider className="mx-[4]" direction="vertical" />
+              <Text className="text-body-sm">Home</Text>
+            </View>
+          </View>
+        </View>
+
         <View className="mb-4 gap-2">
           <Text className="text-headline-md">Checkboxes</Text>
           <View className="flex-col gap-2">
