@@ -1,20 +1,80 @@
 import { useState } from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import { ScrollView, Text, TextInput, View } from 'react-native';
 
 import { Badge } from '@/src/shared/ui/badge';
 import { Button } from '@/src/shared/ui/button';
 import { Checkbox } from '@/src/shared/ui/checkbox';
 import { Divider } from '@/src/shared/ui/divider';
+import { Input } from '@/src/shared/ui/input';
 import { Radio } from '@/src/shared/ui/radio';
 
 export default function ComponentsIndex() {
   const [value, setValue] = useState('apple');
   const [checkValues, setCheckValues] = useState<string[]>(['kimchi']);
 
+  const [inputValue, setInputValue] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
     <ScrollView>
       <View className="p-4">
         <Text className="text-headline-lg">Components Index page</Text>
+        <View className="mb-4 gap-2">
+          <Text className="text-headline-md">Inputs</Text>
+          <TextInput
+            className="placeholder-shown:border-red-500 focus:border"
+            placeholder="enter text"
+          />
+
+          <Input>
+            <Input.FieldWrap>
+              <Input.Field placeholder="아이디" value={inputValue} onChangeText={setInputValue} />
+              <Input.IconWrap>
+                {!!inputValue && (
+                  <Input.Icon
+                    height={16}
+                    name="cancel"
+                    width={16}
+                    onPress={() => setInputValue('')}
+                  />
+                )}
+                <Input.Icon height={24} name="eye" width={24} />
+              </Input.IconWrap>
+            </Input.FieldWrap>
+            <Input.Description>
+              존재하지 않는 아이디이거나 비밀번호가 정확하지 않아요.
+            </Input.Description>
+          </Input>
+
+          <Input error>
+            <Input.FieldWrap>
+              <Input.Field
+                error
+                placeholder="비밀번호"
+                secureTextEntry={!showPassword}
+              ></Input.Field>
+              <Input.Icon
+                height={24}
+                name="eye"
+                width={24}
+                onPress={() => setShowPassword((prev) => !prev)}
+              />
+            </Input.FieldWrap>
+            <Input.Description>
+              존재하지 않는 아이디이거나 비밀번호가 정확하지 않아요.
+            </Input.Description>
+          </Input>
+
+          <Input disabled>
+            <Input.FieldWrap>
+              <Input.Field disabled defaultValue="123" placeholder="비밀번호"></Input.Field>
+            </Input.FieldWrap>
+            <Input.Description>
+              존재하지 않는 아이디이거나 비밀번호가 정확하지 않아요.
+            </Input.Description>
+          </Input>
+        </View>
+
         <View className="mb-4 gap-2">
           <Text className="text-headline-md">Badges</Text>
           <View className="gap-[8]">
